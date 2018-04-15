@@ -1,0 +1,40 @@
+package com.baowei.dictionary;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * 测试入口          类似ik细粒度分法
+ * @author bowen_bao
+ *
+ */
+public class Main {
+
+	public static void main(String[] args) {
+		
+		//词库清空词元
+		Dictionary.clear();
+		List<String> list = new ArrayList<String>();
+		 list.add("a");
+		 list.add("b");
+		 list.add("c");
+		 list.add("ab");
+		 list.add("abc");
+		Dictionary.getSingleton().fillDictionary(list, 1);
+		
+		
+		List<Matchs> matchs = Tokenizer.doRecongrizer("ab");
+		System.out.println("matchs.size()="+matchs.size());
+		for (Matchs matchs2 : matchs) {
+			System.out.println(matchs2.getFinalString()+"|"+matchs2.getUnitType());
+		}
+		
+		System.out.println("****************************111");
+		
+		
+		
+		
+				 
+	}
+
+}

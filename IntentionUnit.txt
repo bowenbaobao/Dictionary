@@ -1,0 +1,32 @@
+package com.baowei.dictionary;
+
+/**
+ * 识别单元
+ * @author bowen_bao
+ *
+ */
+public class IntentionUnit {
+	private Integer unitType;
+	private String words;
+	
+	public IntentionUnit(String words, Integer unitType) {
+		this.words = words;
+		this.unitType = unitType;
+	}
+
+	public Integer getUnitType() {
+		return unitType;
+	}
+
+	public void setUnitType(Integer unitType) {
+		this.unitType = unitType;
+	}
+
+	public String getWords() {
+		return words;
+	}
+
+	public void setWords(String words) {
+		this.words = words;
+	}
+}
